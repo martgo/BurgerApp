@@ -39,7 +39,6 @@ public class MenuSide extends JPanel implements ActionListener {
                     frameMenu.setResizable(false);
                     frameMenu.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
                     frameMenu.pack();
-                    frameMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     frameMenu.setLocationRelativeTo(null);
                     frameMenu.setVisible(true);
                 }
@@ -62,7 +61,6 @@ public class MenuSide extends JPanel implements ActionListener {
                 frameSnacks.setResizable(false);
                 frameSnacks.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
                 frameSnacks.pack();
-                frameSnacks.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frameSnacks.setLocationRelativeTo(null);
                 frameSnacks.setVisible(true);
             }
@@ -85,7 +83,6 @@ public class MenuSide extends JPanel implements ActionListener {
                     frameBeverages.setResizable(false);
                     frameBeverages.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
                     frameBeverages.pack();
-                    frameBeverages.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     frameBeverages.setLocationRelativeTo(null);
                     frameBeverages.setVisible(true);
                 } }
