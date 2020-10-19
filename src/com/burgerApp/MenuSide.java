@@ -41,6 +41,14 @@ public class MenuSide extends JPanel implements ActionListener {
                     frameMenu.pack();
                     frameMenu.setLocationRelativeTo(null);
                     frameMenu.setVisible(true);
+                    JPanel burgerSide = null;
+                    try {
+                        burgerSide = new Burgers();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    frameMenu.add(burgerSide);
+
                 }
             }
         });
@@ -63,6 +71,13 @@ public class MenuSide extends JPanel implements ActionListener {
                 frameSnacks.pack();
                 frameSnacks.setLocationRelativeTo(null);
                 frameSnacks.setVisible(true);
+                JPanel snacksSide = null;
+                try {
+                    snacksSide = new Snacks();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                frameSnacks.add(snacksSide);
             }
         }
     });
@@ -76,7 +91,7 @@ public class MenuSide extends JPanel implements ActionListener {
         beveragesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                if (actionEvent.getActionCommand().equals("BEVERAGES")){
+                if (actionEvent.getActionCommand().equals("BEVERAGES")) {
                     JFrame frameBeverages = new JFrame();
                     frameBeverages.setPreferredSize(new Dimension(500, 500));
                     frameBeverages.setTitle("BURGERAPP BEVERAGES");
@@ -85,7 +100,15 @@ public class MenuSide extends JPanel implements ActionListener {
                     frameBeverages.pack();
                     frameBeverages.setLocationRelativeTo(null);
                     frameBeverages.setVisible(true);
-                } }
+                    JPanel beveragesSide = null;
+                    try {
+                        beveragesSide = new Snacks();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    frameBeverages.add(beveragesSide);
+                }
+            }
         });
         add(beveragesButton);
 //
