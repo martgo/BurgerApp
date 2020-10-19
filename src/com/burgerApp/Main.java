@@ -16,6 +16,8 @@ public class Main {
         frame.setLocation(50, 50);
         frame.pack();
         frame.setVisible(true);
+        ImageIcon burgerAppIcon = new ImageIcon("/src/resources/BurgerAppIcon.png");
+        frame.setIconImage(burgerAppIcon.getImage());
     }
     public static void main(String[] args) {
         new Main();
