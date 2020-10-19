@@ -32,6 +32,17 @@ public class MenuSide extends JPanel implements ActionListener {
         menuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                if (actionEvent.getActionCommand().equals("BURGERS")){
+                    JFrame frameMenu = new JFrame();
+                    frameMenu.setPreferredSize(new Dimension(500, 500));
+                    frameMenu.setTitle("BURGERAPP BURGERS");
+                    frameMenu.setResizable(false);
+                    frameMenu.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+                    frameMenu.pack();
+                    frameMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frameMenu.setLocationRelativeTo(null);
+                    frameMenu.setVisible(true);
+                }
             }
         });
         add(menuButton);
@@ -41,7 +52,22 @@ public class MenuSide extends JPanel implements ActionListener {
         snacksButton.setBounds(180,300,150,50);
         snacksButton.setHorizontalAlignment(JButton.CENTER);
         snacksButton.setForeground(Color.RED);
-        snacksButton.addActionListener(this);
+        snacksButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            if (actionEvent.getActionCommand().equals("SNACKS")){
+                JFrame frameSnacks = new JFrame();
+                frameSnacks.setPreferredSize(new Dimension(500, 500));
+                frameSnacks.setTitle("BURGERAPP SNACKS");
+                frameSnacks.setResizable(false);
+                frameSnacks.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+                frameSnacks.pack();
+                frameSnacks.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frameSnacks.setLocationRelativeTo(null);
+                frameSnacks.setVisible(true);
+            }
+        }
+    });
         add(snacksButton);
 
         beveragesButton = new JButton("BEVERAGES");
@@ -49,7 +75,21 @@ public class MenuSide extends JPanel implements ActionListener {
         beveragesButton.setBounds(180,350,150,50);
         beveragesButton.setHorizontalAlignment(JButton.CENTER);
         beveragesButton.setForeground(Color.RED);
-        beveragesButton.addActionListener(this);
+        beveragesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if (actionEvent.getActionCommand().equals("BEVERAGES")){
+                    JFrame frameBeverages = new JFrame();
+                    frameBeverages.setPreferredSize(new Dimension(500, 500));
+                    frameBeverages.setTitle("BURGERAPP BEVERAGES");
+                    frameBeverages.setResizable(false);
+                    frameBeverages.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+                    frameBeverages.pack();
+                    frameBeverages.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frameBeverages.setLocationRelativeTo(null);
+                    frameBeverages.setVisible(true);
+                } }
+        });
         add(beveragesButton);
 //
         quitButton = new JButton("QUIT");
