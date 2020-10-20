@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 
 public class Burgers extends JPanel implements ActionListener {
-    JLabel logoLabel;
+    JLabel logoLabel, textLabel;
     JPanel buttonPanel;
     JButton quitButton, menuButton, snacksButton, beveragesButton;
     private ImageIcon logoImage;
@@ -20,39 +20,23 @@ public class Burgers extends JPanel implements ActionListener {
         logoLabel = new JLabel(logoImage);
         logoLabel.setBounds(15, 10, 100, 100);
         add(logoLabel);
-        //buttons
-        menuButton = new JButton(" ");
-        menuButton.setFont(new Font("Phosphate", Font.ITALIC, 20));
-        menuButton.setBounds(0, 250, 150, 50);
-        menuButton.setHorizontalAlignment(JButton.CENTER);
-        menuButton.setForeground(Color.RED);
-        menuButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                if (actionEvent.getActionCommand().equals("BURGERS")) {
-                    JFrame frameMenu = new JFrame();
-                    frameMenu.setPreferredSize(new Dimension(500, 500));
-                    frameMenu.setTitle("BURGERAPP BURGERS");
-                    frameMenu.setResizable(false);
-                    frameMenu.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-                    frameMenu.pack();
-                    frameMenu.setLocationRelativeTo(null);
-                    frameMenu.setVisible(true);
-                }
-            }
-        });
-        add(menuButton);
+        textLabel = new JLabel("BEST BURGERS ON ORDER ", SwingConstants.CENTER);
+        textLabel.setFont(new Font("SignPainter", Font.BOLD, 30));
+        textLabel.setBounds(120, 5, 300, 100);
+        textLabel.setForeground(Color.black);
+        add(textLabel);
+
         quitButton = new JButton("QUIT");
         quitButton.setFont(new Font("Phosphate", Font.ITALIC, 20));
         quitButton.setBounds(180,400,150,50);
         quitButton.setHorizontalAlignment(JButton.CENTER);
         quitButton.setForeground(Color.RED);
-        quitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                System.exit(0);
-            }
-        });
+//        quitButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent actionEvent) {
+//                System.exit(0);
+//            }
+//        });
         add(quitButton);
     }
 
